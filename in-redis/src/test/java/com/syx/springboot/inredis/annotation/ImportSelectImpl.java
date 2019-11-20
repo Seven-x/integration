@@ -1,0 +1,12 @@
+package com.syx.springboot.inredis.annotation;
+
+import org.springframework.context.annotation.ImportSelector;
+import org.springframework.core.type.AnnotationMetadata;
+
+public class ImportSelectImpl implements ImportSelector {
+
+    @Override
+    public String[] selectImports(AnnotationMetadata annotationMetadata) {
+        return new String[]{"com.syx.springboot.inredis.annotation.PersionOnImportSelector"};
+    }
+}

@@ -1,0 +1,15 @@
+server:
+  port: 9002
+
+spring:
+  elasticsearch:
+    rest:
+#      uris: localhost:32769 #es地址
+#      username: elastic #默认用户名
+#      password: changeme #默认密码
+        uris: es-cn-0pp1ds5gm001ijxrq.elasticsearch.aliyuncs.com:9200
+        username: elastic
+        password: F8B12IKvyT8GBbZE
+  application:
+    name: xmc-search-service
+

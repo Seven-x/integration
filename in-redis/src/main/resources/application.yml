@@ -1,0 +1,19 @@
+#Redis config
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: 15
+        min-idle: 0
+    timeout: 1000
+
+persion:
+  userId: 1
+  userName: syx
+

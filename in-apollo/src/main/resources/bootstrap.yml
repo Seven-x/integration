@@ -1,0 +1,4 @@
+apollo:
+  bootstrap:
+    enable: true
+    namespases:
