@@ -8,7 +8,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.syx.springboot</groupId>
     <artifactId>in-es</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>in-es</name>
