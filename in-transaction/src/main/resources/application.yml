@@ -1,10 +1,9 @@
 spring :
   datasource :
-    driverClassName: com.mysql.jdbc.Driver
-    url : jdbc:mysql://rm-2zed7t3zm225t89do.mysql.rds.aliyuncs.com:3306/springboot_v1?useUnicode=true&amp;characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-2zed7t3zm225t89do.mysql.rds.aliyuncs.com:3306/autosaas?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: Pass@word1
     hikari:
       maxLifetime: 1765000
       maximumPoolSize: 15
-      driver-class-name:
