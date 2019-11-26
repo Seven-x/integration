@@ -15,6 +15,7 @@
         <module>in-redis</module>
         <module>in-apollo</module>
         <module>in-es</module>
+        <module>in-transaction</module>
     </modules>
 
     <parent>
