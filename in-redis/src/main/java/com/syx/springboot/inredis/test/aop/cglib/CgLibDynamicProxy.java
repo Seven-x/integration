@@ -5,7 +5,6 @@ import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 
-import java.lang.invoke.MethodHandleInfo;
 import java.lang.reflect.Method;
 
 /**
@@ -26,6 +25,9 @@ public class CgLibDynamicProxy implements MethodInterceptor {
 
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
-        return proxy.invokeSuper(obj, args);
+        System.out.println("Do something before!");
+        Object object = proxy.invokeSuper(obj, args);
+        System.out.println("Do something after!");
+        return object;
     }
 }
