@@ -1,5 +1,6 @@
 package com.syx.springboot.inredis.test.aop;
 
+import com.syx.springboot.inredis.test.aop.cglib.CgLibDynamicProxy;
 import com.syx.springboot.inredis.test.aop.jdk.JdkDynamicProxy;
 
 /**
@@ -10,9 +11,12 @@ public class Client {
 
     public static void main(String[] args) {
         // 保存生产代理类的字节码文件
-        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 
         Target targetJdkProxy = new JdkDynamicProxy(new TargetImpl()).newProxyInstance();
         System.out.println(targetJdkProxy.test(1));
+
+        Target targetCgLibProxy = CgLibDynamicProxy.newProxyInstance(TargetImpl.class);
+        System.out.println(targetCgLibProxy.test(1));
     }
 }
