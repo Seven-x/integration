@@ -13,10 +13,11 @@ public class Client {
         // 保存生产代理类的字节码文件
 //        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 
-        Target targetJdkProxy = new JdkDynamicProxy(new TargetImpl()).newProxyInstance();
-        System.out.println(targetJdkProxy.test(1));
+        Target target = new TargetImpl();
+        Target targetJdkProxy = new JdkDynamicProxy(target).newProxyInstance();
+        targetJdkProxy.hello("shaoyx");
 
-        Target targetCgLibProxy = CgLibDynamicProxy.newProxyInstance(TargetImpl.class);
-        System.out.println(targetCgLibProxy.test(1));
+        Target targetCgLibProxy = CgLibDynamicProxy.newProxyInstance(target.getClass());
+        targetCgLibProxy.hello("zeyusheng");
     }
 }

@@ -6,6 +6,6 @@ package com.syx.springboot.inredis.test.aop;
  */
 public interface Target {
 
-    int test(int i);
+    String hello(String name);
 
 }

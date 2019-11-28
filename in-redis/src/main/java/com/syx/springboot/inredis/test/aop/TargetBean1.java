@@ -7,6 +7,6 @@ import lombok.Data;
  * @date 12:00  2019/11/28
  */
 @Data
-public class TargetBean {
+public class TargetBean1 {
     private String value;
 }

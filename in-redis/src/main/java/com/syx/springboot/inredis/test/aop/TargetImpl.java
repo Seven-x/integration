@@ -7,8 +7,8 @@ package com.syx.springboot.inredis.test.aop;
 public class TargetImpl implements Target {
 
     @Override
-    public int test(int i) {
-        System.out.println("test: "+i);
-        return i + i;
+    public String hello(String name) {
+        System.out.println("Hello " + name);
+        return "Hello " + name;
     }
 }
