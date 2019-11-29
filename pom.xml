@@ -16,6 +16,7 @@
         <module>in-apollo</module>
         <module>in-es</module>
         <module>in-transaction</module>
+        <module>in-utils</module>
     </modules>
 
     <parent>
@@ -35,6 +36,7 @@
         <fastjson.version>1.2.60</fastjson.version>
         <jjwt.version>0.9.0</jjwt.version>
         <mybatis.version>2.1.1</mybatis.version>
+        <dozer.version>5.5.1</dozer.version>
     </properties>
 
     <dependencies>
@@ -129,6 +131,12 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <scope>runtime</scope>
                 <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.dozer</groupId>
+                <artifactId>dozer</artifactId>
+                <version>${dozer.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

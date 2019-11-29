@@ -7,6 +7,7 @@ import com.syx.springboot.inredis.test.aop.TargetImpl;
 import org.junit.Test;
 import org.springframework.cglib.beans.BeanCopier;
 import org.springframework.cglib.beans.BeanGenerator;
+import org.springframework.cglib.beans.BulkBean;
 import org.springframework.cglib.beans.ImmutableBean;
 import org.springframework.cglib.proxy.*;
 
@@ -153,5 +154,23 @@ public class CgLibDynamicProxyTest {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+
+    @Test
+    public void testBulkBean(){
+        BulkBean bulkBean = BulkBean.create(TargetBean.class,
+                new String[]{"getValue"},
+                new String[]{"setValue"},
+                new Class[]{String.class});
+
+        TargetBean targetBean = new TargetBean();
+        targetBean.setValue("hello cglib");
+        Object[] propertyValues = bulkBean.getPropertyValues(targetBean);
+        System.out.println(bulkBean.getPropertyValues(targetBean).length);
+        System.out.println(bulkBean.getPropertyValues(targetBean)[0]);
+
+        bulkBean.setPropertyValues(targetBean, new String[]{"hello cglib"});
+        System.out.println(targetBean.getValue());
     }
 }
