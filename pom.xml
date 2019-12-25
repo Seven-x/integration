@@ -17,6 +17,7 @@
         <module>in-es</module>
         <module>in-transaction</module>
         <module>in-utils</module>
+        <module>in-mq</module>
     </modules>
 
     <parent>
@@ -137,6 +138,13 @@
                 <groupId>net.sf.dozer</groupId>
                 <artifactId>dozer</artifactId>
                 <version>${dozer.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.aliyun.openservices/ons-client -->
+            <dependency>
+                <groupId>com.aliyun.openservices</groupId>
+                <artifactId>ons-client</artifactId>
+                <version>1.8.0.Final</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
