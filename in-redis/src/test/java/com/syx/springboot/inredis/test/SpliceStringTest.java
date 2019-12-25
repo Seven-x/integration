@@ -1,18 +1,14 @@
 package com.syx.springboot.inredis.test;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONPObject;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
-import com.google.gson.JsonObject;
 import org.assertj.core.util.Lists;
-import org.json.JSONObject;
 import org.junit.Test;
 
 import java.text.MessageFormat;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.StringJoiner;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
@@ -107,20 +103,20 @@ public class SpliceStringTest {
         };
     }
 
-    public static Consumer<String> splitter(){
+    public static Consumer<String> splitter() {
         return str -> {
             List<String> list = Lists.newArrayList();
             Iterable iterable = Splitter.on(',').trimResults().split(str);
-            for (Object o : iterable){
+            for (Object o : iterable) {
                 list.add(String.valueOf(o));
             }
         };
     }
 
-    public static Consumer<String> splitter1(){
+    public static Consumer<String> splitter1() {
         return str -> {
             List<String> list = Lists.newArrayList();
-            for (String s : Splitter.on(',').trimResults().split(str)){
+            for (String s : Splitter.on(',').trimResults().split(str)) {
                 list.add(String.valueOf(s));
             }
         };
@@ -163,21 +159,21 @@ public class SpliceStringTest {
 
 
     @Test
-    public void test1(){
+    public void test1() {
         String str = "123,123,3234,435,5,6,7777,7";
         Iterator iterator = Splitter
                 .on(',')
                 .trimResults()
                 .split(str).iterator();
         List<String> list = Lists.newArrayList();
-       while (iterator.hasNext()){
-           list.add(String.valueOf(iterator.next()));
-       }
+        while (iterator.hasNext()) {
+            list.add(String.valueOf(iterator.next()));
+        }
         System.out.println(list);
     }
 
     @Test
-    public void test2(){
+    public void test2() {
         String str = "123,123,3234,435,5,6,7777,7";
         splitter(splitter(), str, "先转Object");
         splitter(splitter1(), str, "直接转String");
@@ -185,10 +181,21 @@ public class SpliceStringTest {
 
 
     @Test
-    public void test3(){
-        String str = "{\"code\":\"8573\"} " ;
+    public void test3() {
+        String str = "{\"code\":\"8573\"} ";
 //        Map<String, String> map = JsonObject
 //        System.out.println(map);
     }
+
+    @Test
+    public void test4() {
+        int initialCapacity = 26;
+        int capacity = 1;
+        while (capacity < initialCapacity)
+            capacity <<= 1;
+
+        System.out.println();
+    }
+
 
 }

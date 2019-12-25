@@ -23,6 +23,15 @@ public class CgLibDynamicProxy implements MethodInterceptor {
         return (Target) enhancer.create();
     }
 
+    /**
+     *
+     * @author shaoyx
+     * @param obj 代理对象
+     * @param method 被代理对象方法
+     * @param args 方法入参
+     * @param proxy 代理方法
+     * @return
+     */
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
         System.out.println("Do something before!");
