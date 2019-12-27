@@ -1,9 +1,15 @@
 server:
-  port: 41201
+  port: 10002
 
 spring:
   application:
-    name: in-apollo
+    name: @artifactId@
   mvc:
     static-path-pattern: /**  # 静态资源映射
 
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://in-eureka:10001/eureka/
