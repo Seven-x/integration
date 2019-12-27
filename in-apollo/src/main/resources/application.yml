@@ -1,0 +1,9 @@
+server:
+  port: 41201
+
+spring:
+  application:
+    name: in-apollo
+  mvc:
+    static-path-pattern: /**  # 静态资源映射
+

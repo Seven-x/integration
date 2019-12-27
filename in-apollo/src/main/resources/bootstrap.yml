@@ -1,4 +1,4 @@
 apollo:
   bootstrap:
-    enable: true
-    namespases:
+    enabled: true
+    namespaces: application,saas.eureka
