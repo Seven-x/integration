@@ -1,4 +1,4 @@
-package com.syx.springboot.inutils;
+package com.syx.springboot.ineureka;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class InUtilsApplicationTests {
+class InEurekaApplicationTests {
 
     @Test
     void contextLoads() {
