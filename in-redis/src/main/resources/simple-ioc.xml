@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="com.syx.springboot.inredis.test.ioc.xml.Person">
+        <property name="name" value="泽虞生"/>
+        <property name="age" value="18"/>
+        <property name="sex" value="1"/>
+    </bean>
+
+    <bean id="student" class="com.syx.springboot.inredis.test.ioc.xml.Student">
+        <property name="name" value="泽虞生"/>
+        <property name="age" value="18"/>
+        <property name="sex" value="1"/>
+        <property name="className" value="XXX大学"/>
+        <property name="classNo" value="201901234"/>
+    </bean>
+</beans>
