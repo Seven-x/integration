@@ -7,3 +7,4 @@ in-transaction  整合transaction       \
 in-apollo       使用apollo配置中心     \
 in-eureka       使用注册中心           \
 in-mq           整合MQ消息队列         \
+in-mybatis      整合Mybatis

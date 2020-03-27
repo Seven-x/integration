@@ -19,6 +19,7 @@
         <module>in-transaction</module>
         <module>in-utils</module>
         <module>in-mq</module>
+        <module>in-mybatis</module>
     </modules>
 
     <parent>
